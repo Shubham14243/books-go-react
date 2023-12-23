@@ -1,6 +1,8 @@
 # Book-Api-Go
 
-This little project was not supposed to be a part of the gophercises but why not.
-Its a simple api made using the gin framwork(while reading the documentation).
+The API developed using Golang, using the gin framwork(while reading the documentation).
 
-Once I complete it, it shall have its own repo.
+A simple frontend is also developed using React.
+The data is stored using JSON, when the mood strikes I will use mongoDB to store the data.
+
+Feel free to play around with it!
