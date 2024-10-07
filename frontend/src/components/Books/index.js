@@ -7,7 +7,7 @@ import UpdateModal from "../Modal/UpdateModal";
 import CheckOutModal from "../Modal/CheckOutModal";
 import AddModal from "../Modal/AddModal";
 
-const Books = ({adminStatus}) => {
+const Books = ({adminStatus, userDetails}) => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [updateModel, setUpdateModal] = useState(false);
@@ -289,6 +289,7 @@ const Books = ({adminStatus}) => {
       checkoutModal={checkoutModal}
       handleCheckout={handleCheckout}
       id={cBookID}
+      userID={userDetails.id}
     />
   );
 

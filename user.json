@@ -30,19 +30,23 @@
   ]
  },
  {
-  "id": "5270",
-  "access": "admin",
-  "username": "rajat.s",
-  "email": "rajat.s@gmail.com",
-  "password": "$2a$15$I/pHBooI2HDr3AlegiK61.pK0FLnwvRyiiFonZQyzO0ui1rtoHYem",
-  "issued": null
- },
- {
   "id": "5869",
   "access": "user",
   "username": "ravi",
   "email": "ravi@gmail.com",
   "password": "$2a$15$fUGrxasGMS.OUF.rMuNViOWByxattd/ZBDcVDtgy2PtbRjZ8pQ0zy",
-  "issued": null
+  "issued": [
+   "6"
+  ]
+ },
+ {
+  "id": "5270",
+  "access": "admin",
+  "username": "rajat.s",
+  "email": "rajat.s@gmail.com",
+  "password": "$2a$15$I/pHBooI2HDr3AlegiK61.pK0FLnwvRyiiFonZQyzO0ui1rtoHYem",
+  "issued": [
+   "6"
+  ]
  }
 ]
