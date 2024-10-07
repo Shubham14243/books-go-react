@@ -7,13 +7,6 @@
     "total": 5
   },
   {
-    "id": "6",
-    "title": "Ramba",
-    "author": "Shivu sinha",
-    "quantity": 4,
-    "total": 5
-  },
-  {
     "id": "5",
     "title": "Hacchi",
     "author": "Unknown to librarian",
@@ -68,5 +61,12 @@
     "author": "Savala",
     "quantity": 2,
     "total": 2
+  },
+  {
+    "id": "6",
+    "title": "Ramba",
+    "author": "Shivu sinha",
+    "quantity": 5,
+    "total": 8
   }
 ]

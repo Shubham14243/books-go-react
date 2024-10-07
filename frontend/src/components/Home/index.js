@@ -31,7 +31,6 @@ const Home = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.type === "success") {
-          console.log(data)
           setUser(data["user-details"]);
         }
       })

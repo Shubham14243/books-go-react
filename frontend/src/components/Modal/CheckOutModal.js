@@ -15,17 +15,15 @@ const CheckOutModal = ({
   toggle,
   checkoutModal,
   handleCheckout,
-  id
+  id,
+  userID
 }) => {
-    const [userid, setUserid] = useState("")
     const [bookid, setBookId] = useState(999999);
     useEffect(()=>{
         setBookId(id)
     }, [id]);
 
-  const handleOnChange = (e) => {
-    setUserid(e.target.value);
-  };
+
 
   return (
     <div>
@@ -35,7 +33,7 @@ const CheckOutModal = ({
         className="checkOutModal"
         backdrop="static"
       >
-        <ModalHeader toggle={handleCheckout}>Update {bookid}</ModalHeader>
+        <ModalHeader toggle={handleCheckout}>Checkout with {bookid}</ModalHeader>
         <ModalBody>
           <Form>
             <FormGroup>
@@ -57,8 +55,8 @@ const CheckOutModal = ({
                 name="userid"
                 placeholder="Enter user id here"
                 type="text"
-                value={userid}
-                onChange={handleOnChange}
+                value={userID || ""}
+                readOnly
               />
             </FormGroup>
           </Form>
@@ -66,7 +64,7 @@ const CheckOutModal = ({
         <ModalFooter>
           <Button
             onClick={() => {
-                handleCheckout(bookid, userid);
+                handleCheckout(bookid, userID);
                 toggle();
             }}
           >

@@ -26,6 +26,7 @@ func main() {
 		router.GET("/books", Controller.GetBooks)    // http://localhost:8080/book
 		router.GET("/book/:id", Controller.BookById) // http://localhost:8080/book/3
 		router.GET("/user/:id", Controller.GetUserByID)
+		router.PATCH("/checkout/:uid", Controller.CheckOut) // http://localhost:8080/checkout/uid?id=3
 	}
 	router.Use(MiddleWare.CheckAdminAuth())
 	{
@@ -35,7 +36,6 @@ func main() {
 		router.GET("/addexistingbook/:id", Controller.AddExistingBook) // http://localhost:8080/addexistingbook/id?c=4
 		router.POST("/addbook", Controller.AddBook)                    // http://localhost:8080/addbook
 		router.POST("/update", Controller.UpdateBook)                  // http://localhost:8080/update
-		router.PATCH("/checkout/:uid", Controller.CheckOut)            // http://localhost:8080/checkout/uid?id=3
 		router.DELETE("/delete/:id", Controller.DeleteBook)
 
 		router.GET("/changeuserauth/:id", Controller.ChangeUserAuth) // http://localhost:8080/changeuserauth/:id?access=2
