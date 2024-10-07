@@ -1,7 +1,7 @@
 import { Button, Card, CardBody, CardFooter, CardText, CardTitle } from "reactstrap";
 
 const User = ({ username, id, access, email, issued })=>{
-  const issuedString = issued.length>0 ? `Issued Books isbn(s): ${issued}`:`Issued Books isbn(s): N/A`;
+  const issuedString = issued?.length>0 ? `Issued Books isbn(s): ${issued}`:`Issued Books isbn(s): N/A`;
     return (
         <Card>
           <CardBody>

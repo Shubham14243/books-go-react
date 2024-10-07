@@ -17,6 +17,7 @@ const Book = ({
   handleUpdate,
   doCheckout,
   onAdd,
+  adminStatus
 }) => {
   return (
     <Card>
@@ -32,23 +33,23 @@ const Book = ({
           Total Copies: {total}
           <br />
         </CardText>
-        <Button name={isbn} onClick={handleUpdate}>
+        {adminStatus && <Button name={isbn} onClick={handleUpdate}>
           Update
-        </Button>
+        </Button>}
         {"   "}
         <Button name={isbn} onClick={doCheckout}>
           Checkout
         </Button>
         {"   "}
-        <Button name={isbn} onClick={onAdd}>
+        {adminStatus && <Button name={isbn} onClick={onAdd}>
           Add
-        </Button>
+        </Button>}
       </CardBody>
-      <CardFooter>
+      {adminStatus && <CardFooter>
         <Button name={isbn} onClick={handleDelete}>
           Delete
         </Button>
-      </CardFooter>
+      </CardFooter>}
     </Card>
   );
 };

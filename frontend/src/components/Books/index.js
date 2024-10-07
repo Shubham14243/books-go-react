@@ -7,7 +7,7 @@ import UpdateModal from "../Modal/UpdateModal";
 import CheckOutModal from "../Modal/CheckOutModal";
 import AddModal from "../Modal/AddModal";
 
-const Books = () => {
+const Books = ({adminStatus}) => {
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   const [updateModel, setUpdateModal] = useState(false);
@@ -46,7 +46,6 @@ const Books = () => {
       .then((response) => response.json())
       .then((data) => {
         if(data.type === "tokenerror"){
-          console.log("problem with auth token, try to login again!");
           localStorage.removeItem("authToken");
           setAlertState({
             show: true,
@@ -55,10 +54,9 @@ const Books = () => {
           });
         }
         else if(data.type === "error"){
-          console.log("something went wrong while getting books", data.error.message);
           setAlertState({
             show: true,
-            type: "success",
+            type: "danger",
             message: data.error.message,
           });
         }
@@ -266,6 +264,7 @@ const Books = () => {
             handleUpdate={handleUpdate}
             doCheckout={doCheckout}
             onAdd={onAdd}
+            adminStatus={adminStatus}
           />
         </li>
         <br />
